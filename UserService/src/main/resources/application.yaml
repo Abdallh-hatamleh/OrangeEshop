@@ -44,7 +44,7 @@ spring:
             enable: true
 
 jwt:
-  secret: my-super-secret-key # Change this and move to environment variable in prod
+  secret: lgT621AKlEP2TjoaW9+4dp0B7ulkrEgXOJSHFiAJIhg=   #move to environment variable in prod
   expiration: 86400000 # 1 day in milliseconds
 
 logging:

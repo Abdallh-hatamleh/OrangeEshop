@@ -29,12 +29,10 @@ public class User {
     private String name;
 
     @Column(nullable = false)
-    @Builder.Default
-    private boolean isAdmin = false;
+    private boolean isAdmin;
 
     @Column(nullable = false)
-    @Builder.Default
-    private boolean isEmailVerified = false;
+    private boolean isEmailVerified;
 
     @Column(nullable = false)
     @Builder.Default

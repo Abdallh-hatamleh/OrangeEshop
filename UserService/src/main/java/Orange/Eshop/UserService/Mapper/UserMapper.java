@@ -10,7 +10,8 @@ import org.mapstruct.factory.Mappers;
 public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    UserResponse userToUserResponse(User user);
+    public UserResponse toUserResponse(User user);
 
-    User toUser(RegisterRequest registerRequest);
+    public User toUser(RegisterRequest registerRequest);
+
 }
