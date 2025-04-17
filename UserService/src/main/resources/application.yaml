@@ -5,6 +5,11 @@ spring:
   application:
     name: user-service
 
+  multipart:
+    enabled: true
+    max-file-size: 5MB
+    max-request-size: 5MB
+
   datasource:
     url: jdbc:mysql://localhost:3306/eshop?useSSL=false&serverTimezone=UTC
     username: root
@@ -28,6 +33,7 @@ spring:
 
   servlet:
     multipart:
+      enabled: true
       max-file-size: 5MB
       max-request-size: 5MB
 

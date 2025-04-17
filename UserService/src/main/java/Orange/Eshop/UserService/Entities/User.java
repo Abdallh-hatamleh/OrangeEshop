@@ -42,6 +42,8 @@ public class User {
 
     private LocalDateTime updatedAt;
 
+    private String profilePicture;
+
     @PrePersist
     protected void onCreate()
     {

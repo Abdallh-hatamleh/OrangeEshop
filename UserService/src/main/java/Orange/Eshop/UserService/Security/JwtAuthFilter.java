@@ -28,8 +28,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         count++;
-        log.info("Filter execution count: {}, URI: {}", count, request.getRequestURI());
-
+        log.info("Filter execution count: {}, URI: {}, Type: {}", count, request.getRequestURI(), request.getHeader("Content-Type"));
+        log.info("request : {} ", request.getParameterMap());
         String path = request.getServletPath();
         if (path.startsWith("/auth/") ||
                 path.startsWith("/swagger-ui") ||
@@ -40,7 +40,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             filterChain.doFilter(request, response);
             return;
         }
-        log.info("Filter execution count: {}, URI: {}", count, request.getRequestURI());
 
         final String authHeader = request.getHeader("Authorization");
         final String jwt;

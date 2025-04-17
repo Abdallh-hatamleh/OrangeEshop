@@ -29,12 +29,10 @@ public class CustomUserDetails implements UserDetails {
         return user.getPassword();
     }
 
-    public long getId() {return user.getId(); }
     @Override
     public String getUsername() {
         return user.getEmail();
     }
-
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -55,4 +53,8 @@ public class CustomUserDetails implements UserDetails {
         return true; //EDIT WHEN IMPLEMENTING EMAIL VERIFICATION
     }
 
+
+    public long getId() {return user.getId(); }
+
+    public String getProfilePicture() { return user.getProfilePicture();}
 }

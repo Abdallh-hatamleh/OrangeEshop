@@ -9,4 +9,5 @@ public class UserResponse {
     private String email;
     private boolean isAdmin;
     private boolean isEmailVerified;
+
 }
